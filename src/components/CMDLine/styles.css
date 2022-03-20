@@ -1,0 +1,21 @@
+.cli {
+    color: #356adc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    display: flex;
+    width: 100%;
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.input-cli {
+    flex-grow: 4;
+    border: none;
+    background-color: transparent;
+    color: #D0D0D0;
+    outline: none;
+    font: inherit;
+}
