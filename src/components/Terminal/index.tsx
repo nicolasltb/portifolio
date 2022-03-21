@@ -5,9 +5,14 @@ import "./styles.css"
 
 export function Terminal() {
 
+    type command = {
+        type:string,
+
+    }
+
     const [lines, setLines] = useState([0]);
 
-    function createNewLine(e:any) {
+    function createNewLine(e:command) {
         setLines(prev => [...prev, 0]);
     }
 
