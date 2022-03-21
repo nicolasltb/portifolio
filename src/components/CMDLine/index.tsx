@@ -2,10 +2,10 @@ import "./styles.css"
 
 type CMDLineProps = {
     isDisabled:boolean,
-    handler:Function
+    createNewLine:Function
 }
 
-export function CMDLine({isDisabled, handler}:CMDLineProps) {
+export function CMDLine({isDisabled, createNewLine}:CMDLineProps) {
     return (
         <div className="cli">
             [user@nicolas-server ~]$&nbsp;
@@ -15,7 +15,7 @@ export function CMDLine({isDisabled, handler}:CMDLineProps) {
             onBlur={({ target }) => target.focus()}
             autoFocus 
             disabled={isDisabled} 
-            onKeyDown={(e) => e.key === "Enter" ? handler(e) : null}
+            onKeyDown={(e) => e.key === "Enter" ? createNewLine(e) : null}
             />
         </div>
     );

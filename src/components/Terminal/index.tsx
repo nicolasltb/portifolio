@@ -1,17 +1,29 @@
+import { useState } from "react"
 import { CMDLine } from "../CMDLine"
+import { ErrorLine } from "../ErrorLine"
 import "./styles.css"
 
 export function Terminal() {
 
-    function handler(e:any) {
-        console.log(`Nicolas ${e.key}`)
+    const [lines, setLines] = useState([0]);
+
+    function createNewLine(e:any) {
+        setLines(prev => [...prev, 0]);
     }
 
     return (
         <>
             <h1 className="title">Nicolas Lopes's Server 🖥️</h1>
             <div className="cmd-window">
-                <CMDLine isDisabled={false} handler={handler}></CMDLine>
+                {
+                lines.map((_, i, list) => (
+                    <>
+                    <CMDLine isDisabled={i === list.length-1 ? false : true} createNewLine={createNewLine}></CMDLine>
+                    <ErrorLine errorString={"whoami"}></ErrorLine>
+                    </>
+                    
+                ))
+                }
             </div>
         </>
     );

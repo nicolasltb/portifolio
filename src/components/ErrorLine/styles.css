@@ -1,5 +1,5 @@
-.cli {
-    color: #356adc;
+.cli-error {
+    color: #dfdfdf;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
     display: flex;
@@ -7,13 +7,4 @@
     font-size: 20px;
     margin-left: 10px;
     margin-right: 10px;
-}
-
-.input-cli {
-    flex-grow: 4;
-    border: none;
-    background-color: transparent;
-    color: #D0D0D0;
-    outline: none;
-    font: inherit;
 }
